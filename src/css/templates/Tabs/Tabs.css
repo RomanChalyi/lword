@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("../../fonts/Philosopher-Regular.ttf"); }
+
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../../fonts/Philosopher-Bold.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../../fonts/SourceSansPro-Bold.ttf"); }
+
 .container {
   width: 100%; }
 
@@ -5,4 +21,40 @@
   max-width: 980px;
   margin: auto;
   height: 173px;
-  font-family: "Philosopher-Bold"; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
+  .tabs-block::after {
+    content: " ";
+    border-bottom: 1px solid rgba(73, 72, 72, 0.2); }
+  .tabs-block .tabs-navigation {
+    display: flex;
+    justify-content: center;
+    min-height: 52px;
+    flex-wrap: wrap; }
+    .tabs-block .tabs-navigation__tab-item {
+      font-family: "SourceSansPro";
+      font-size: 16px;
+      margin-right: 39px;
+      padding-top: 15px; }
+      .tabs-block .tabs-navigation__tab-item:last-child {
+        margin-right: 0px; }
+      .tabs-block .tabs-navigation__tab-item:hover {
+        cursor: pointer;
+        text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
+        color: #37928a;
+        border-bottom: 1px solid #37928a; }
+        @media screen and (max-width: 475px) {
+          .tabs-block .tabs-navigation__tab-item:hover {
+            border: none; } }
+      @media screen and (max-width: 475px) {
+        .tabs-block .tabs-navigation__tab-item {
+          padding-top: 0px; } }
+    @media screen and (max-width: 475px) {
+      .tabs-block .tabs-navigation {
+        padding: 10px; } }
+  .tabs-block__title {
+    font-family: "Philosopher-Bold";
+    font-size: 28px;
+    line-height: 140%;
+    text-align: center; }

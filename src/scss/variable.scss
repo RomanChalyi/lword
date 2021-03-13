@@ -1,6 +1,7 @@
 //-------------------------------------------------COLOR----------------------------------------------------
 $color-black: #231f20;
 $color-grey: #494848;
+$color-gray-50: rgba(73, 72, 72, 0.2);
 $color-aquamarine: #37928a;
 //-------------------------------------------------MEDIA SCREEN---------------------------------------------------
 
@@ -11,20 +12,20 @@ $desktop: 1300px;
 //-------------------------------------------------FONTS---------------------------------------------------
 @font-face {
   font-family: "Philosopher";
-  src: url("../shared/fonts/Philosopher.ttf");
-}
-
-@font-face {
-  font-family: "SourceSansPro";
-  src: url("../shared/fonts/SourceSansPro.ttf");
+  src: url("../../fonts/Philosopher-Regular.ttf");
 }
 
 @font-face {
   font-family: "Philosopher-Bold";
-  src: url("../shared/fonts/Philosopher-Bold.ttf");
+  src: url("../../fonts/Philosopher-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: "SourceSansPro-Bold";
-  src: url("../shared/fonts/SourceSansPro-Bold.ttf");
+  src: url("../../fonts/SourceSansPro-Bold.ttf");
 }

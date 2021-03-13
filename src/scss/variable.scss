@@ -11,10 +11,20 @@ $desktop: 1300px;
 //-------------------------------------------------FONTS---------------------------------------------------
 @font-face {
   font-family: "Philosopher";
-  src: url("../../fonts/Philosopher.ttf");
+  src: url("../shared/fonts/Philosopher.ttf");
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url("../../fonts/SourceSansPro.ttf");
+  src: url("../shared/fonts/SourceSansPro.ttf");
+}
+
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../shared/fonts/Philosopher-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../shared/fonts/SourceSansPro-Bold.ttf");
 }

@@ -57,6 +57,14 @@
         @media screen and (max-width: 475px) {
           .tabs-block .tabs-navigation__tab-item:hover {
             border: none; } }
+    .tabs-block .tabs-navigation .tab-item--active {
+      cursor: pointer;
+      text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
+      color: #37928a;
+      border-bottom: 1px solid #37928a; }
+      @media screen and (max-width: 475px) {
+        .tabs-block .tabs-navigation .tab-item--active {
+          border: none; } }
   .tabs-block__title {
     font-family: "Philosopher-Bold";
     font-size: 28px;

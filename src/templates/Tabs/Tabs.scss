@@ -1,5 +1,15 @@
 @import "../../scss/variable.scss";
 
+@mixin active {
+    cursor: pointer;
+    text-shadow: 0 0 1px $color-aquamarine, 0 0 1px $color-aquamarine;
+    color: $color-aquamarine;
+    border-bottom: 1px solid $color-aquamarine;
+
+    @media screen and (max-width: 475px) {
+        border: none;
+    }
+}
 
 .container {
     width: 100%;
@@ -51,16 +61,13 @@
             }
 
             &:hover{
-                cursor: pointer;
-                text-shadow: 0 0 1px $color-aquamarine, 0 0 1px $color-aquamarine;
-                color: $color-aquamarine;
-                border-bottom: 1px solid $color-aquamarine;
-
-                @media screen and (max-width: 475px) {
-                    border: none;
-                }
+                @include active;
             }
 
+        }
+
+        .tab-item--active{
+            @include active;
         }
         
     }

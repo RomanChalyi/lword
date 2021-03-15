@@ -1,17 +1,21 @@
 @font-face {
   font-family: "Philosopher";
-  src: url("../../fonts/Philosopher.ttf"); }
+  src: url("../shared/fonts/Philosopher.ttf"); }
 
 @font-face {
   font-family: "SourceSansPro";
-  src: url("../../fonts/SourceSansPro.ttf"); }
+  src: url("../shared/fonts/SourceSansPro.ttf"); }
 
-.test {
-  height: 130px;
-  width: 30px;
-  background-color: violet; }
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../shared/fonts/Philosopher-Bold.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../shared/fonts/SourceSansPro-Bold.ttf"); }
 
 .page-header {
+  height: 60px;
   /* Menu */
   /* Toggle button */ }
   .page-header .wrapper {
@@ -21,17 +25,16 @@
   .page-header .header-container {
     padding: 12px 20px;
     border: 1px solid;
-    position: relative;
-    min-height: 60px; }
+    position: relative; }
   .page-header .menu-list {
     margin-top: 12px;
     display: flex;
     justify-content: flex-end; }
   .page-header .nav {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     pointer-events: none;
-    transition: 0.5s;
-    border: 1px solid; }
+    transition: 0.5s; }
   .page-header .nav-item {
     width: 20px;
     position: relative;
@@ -110,50 +113,3 @@
       transform: translateY(-50%) rotate(45deg) scale(0); }
     .page-header .button-toggle:after {
       transform: translateY(-50%) rotate(-45deg) scale(0); }
-
-.footer {
-  margin-top: 10px;
-  color: #494848;
-  font-family: Philosopher; }
-  .footer .footer-container {
-    padding: 0 20px;
-    border-top: 1px solid #231f20; }
-  .footer .footer-content {
-    margin-top: 32px; }
-  .footer .footer-content__title {
-    font-size: 20px;
-    line-height: 22px;
-    margin-bottom: 8px; }
-  .footer .footer-content__info {
-    font-size: 16px;
-    line-height: 22.4px;
-    font-family: SourceSansPro;
-    font-style: normal; }
-  .footer .content-info__margin {
-    margin-left: 2px; }
-  .footer .content-info__link,
-  .footer .content-info__link:active,
-  .footer .content-info__link:hover {
-    color: #494848;
-    text-decoration: none; }
-
-@media screen and (min-width: 900px) {
-  .footer {
-    display: flex;
-    justify-content: center; }
-    .footer .footer-container {
-      padding: 0;
-      max-width: 980px;
-      width: 80%;
-      display: flex;
-      justify-content: space-around; }
-    .footer .footer-content__title {
-      margin-bottom: 12px; } }
-
-@media screen and (min-width: 1300px) {
-  .footer .footer-content {
-    margin-top: 43px; }
-  .footer .footer-content:first-child {
-    width: 50%; }
-  .footer .footer-content__title {
-    margin-bottom: 23px; } }

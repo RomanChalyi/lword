@@ -1,0 +1,74 @@
+@import "../../scss/variable.scss";
+
+.footer {
+  margin-top: 10px;
+  color: $color-grey;
+  font-family: Philosopher;
+
+  .footer-container {
+    padding: 0 20px;
+    border-top: 1px solid $color-black;
+  }
+
+  .footer-content {
+    margin-top: 32px;
+  }
+
+  .footer-content__title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  .footer-content__info {
+    font-size: 16px;
+    line-height: 22.4px;
+    font-family: SourceSansPro;
+    font-style: normal;
+  }
+
+  .content-info__margin {
+    margin-left: 2px;
+  }
+
+  .content-info__link,
+  .content-info__link:active,
+  .content-info__link:hover {
+    color: $color-grey;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer {
+    display: flex;
+    justify-content: center;
+
+    .footer-container {
+      padding: 0;
+      max-width: 980px;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .footer-content__title {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer {
+    .footer-content {
+      margin-top: 43px;
+    }
+
+    .footer-content:first-child {
+      width: 50%;
+    }
+
+    .footer-content__title {
+      margin-bottom: 23px;
+    }
+  }
+}

@@ -33,7 +33,8 @@
     justify-content: center;
     width: 48px;
     height: 48px;
-    border: 1px solid #49484833;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 1px 1px #49484833;
     border-radius: 8px;
     font-family: "SourceSansPro";
     font-size: 28px;
@@ -44,12 +45,14 @@
     .pagination-block__item:hover {
       color: #37928a;
       text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
-      border: 2px solid #37928a; }
+      border: 2px solid #37928a;
+      box-shadow: none; }
       .pagination-block__item:hover svg {
         fill: #37928a; }
   .pagination-block .item--active {
     color: #37928a;
     text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
-    border: 2px solid #37928a; }
+    border: 2px solid #37928a;
+    box-shadow: none; }
     .pagination-block .item--active svg {
       fill: #37928a; }

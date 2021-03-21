@@ -1,0 +1,56 @@
+@import "../../scss/variable.scss";
+
+@mixin active {
+  color: $color-aquamarine;
+  text-shadow: 0 0 1px $color-aquamarine, 0 0 1px $color-aquamarine;
+  border: 2px solid $color-aquamarine;
+  box-shadow: none;
+  svg {
+    fill: $color-aquamarine;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination-block {
+  max-width: 268px;
+  display: flex;
+
+  svg {
+    fill: $color-grey;
+  }
+
+  &__item {
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 1px 1px $color-gray-50;
+    border-radius: 8px;
+    font-family: "SourceSansPro";
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 7px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
+    &:hover {
+      @include active;
+    }
+  }
+
+  .item--active {
+    @include active;
+  }
+}

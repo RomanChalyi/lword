@@ -1,7 +1,31 @@
 //-------------------------------------------------COLOR----------------------------------------------------
-
-//-------------------------------------------------MEDIA SCREEN VARIABLE---------------------------------------------------
+$color-black: #231f20;
+$color-grey: #494848;
+$color-gray-50: #49484833;
+$color-aquamarine: #37928a;
+//-------------------------------------------------MEDIA SCREEN---------------------------------------------------
 
 $mobile: 320px;
 $tablet: 900px;
 $desktop: 1300px;
+
+//-------------------------------------------------FONTS---------------------------------------------------
+@font-face {
+  font-family: "Philosopher";
+  src: url("../../fonts/Philosopher-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../../fonts/Philosopher-Bold.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../../fonts/SourceSansPro-Bold.ttf");
+}

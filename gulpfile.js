@@ -9,7 +9,7 @@ const postcss = require("gulp-postcss");
 
 gulp.task("sass", () => {
   return gulp
-    .src("./src/scss/**/*.scss")
+    .src("./src/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./src/css"));
 });
@@ -44,7 +44,7 @@ gulp.task("watch", () => {
       directory: true,
     },
   });
-  gulp.watch("./src/scss/**/*.scss", gulp.series(["sass", "styles"]));
+  gulp.watch("./src/**/*.scss", gulp.series(["sass", "styles"]));
   gulp.watch("./src/js/**/*.js", gulp.series(["scripts"]));
   gulp.watch("./**/*.html").on("change", browserSync.reload);
 });

@@ -14,62 +14,92 @@
   font-family: "SourceSansPro-Bold";
   src: url("../../fonts/SourceSansPro-Bold.ttf"); }
 
-.container {
-  width: 100%; }
+.tabs-container {
+  padding: 0 21px; }
 
 .tabs-block {
-  max-width: 980px;
-  margin: auto;
-  height: 173px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
-  .tabs-block ::-webkit-scrollbar {
-    width: 12px; }
-  .tabs-block ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
-    border-radius: 10px; }
-  .tabs-block ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0); }
-  .tabs-block::after {
-    content: " ";
-    border-bottom: 1px solid rgba(73, 72, 72, 0.2); }
-  .tabs-block .tabs-navigation {
-    display: flex;
-    justify-content: center;
-    min-height: 52px;
-    overflow: auto;
-    flex-wrap: nowrap; }
-    .tabs-block .tabs-navigation__tab-item {
-      font-family: "SourceSansPro";
-      font-size: 16px;
-      margin-right: 39px;
-      padding-top: 15px;
-      white-space: nowrap; }
-      .tabs-block .tabs-navigation__tab-item:last-child {
-        margin-right: 0px; }
-      .tabs-block .tabs-navigation__tab-item:hover {
-        cursor: pointer;
-        text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
-        color: #37928a;
-        border-bottom: 1px solid #37928a; }
-        @media screen and (max-width: 475px) {
-          .tabs-block .tabs-navigation__tab-item:hover {
-            border: none; } }
-    .tabs-block .tabs-navigation .tab-item--active {
-      cursor: pointer;
-      text-shadow: 0 0 1px #37928a, 0 0 1px #37928a;
-      color: #37928a;
-      border-bottom: 1px solid #37928a; }
-      @media screen and (max-width: 475px) {
-        .tabs-block .tabs-navigation .tab-item--active {
-          border: none; } }
-  .tabs-block__title {
-    font-family: "Philosopher-Bold";
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  position: relative; }
+  .tabs-block .tabs-title {
+    font-family: "Philosopher";
+    font-weight: 700;
+    line-height: 39.2px;
     font-size: 28px;
-    line-height: 140%;
-    text-align: center; }
-  @media screen and (max-width: 900px) {
-    .tabs-block {
-      padding: 0px 20px; } }
+    color: #231f20; }
+  .tabs-block .tabs-navigation {
+    position: relative;
+    margin: 26px auto 0;
+    display: flex;
+    white-space: nowrap;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25.2px;
+    overflow-x: scroll;
+    max-width: min-content;
+    box-shadow: inset 0px -1px 0px 0px #49484833; }
+    .tabs-block .tabs-navigation__item {
+      margin-bottom: 12px;
+      margin-right: 48px;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      outline: none; }
+      .tabs-block .tabs-navigation__item:focus {
+        position: relative;
+        font-weight: 600;
+        color: #37928a;
+        transition: all 0.2s;
+        overflow: visible; }
+        .tabs-block .tabs-navigation__item:focus:after {
+          content: "";
+          position: absolute;
+          bottom: -12px;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background: #37928a; }
+      .tabs-block .tabs-navigation__item:before {
+        display: block;
+        content: attr(title);
+        font-weight: 600;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden; }
+      .tabs-block .tabs-navigation__item:last-child {
+        margin-right: 0; }
+  .tabs-block .tab-item--active {
+    position: relative;
+    font-weight: 600;
+    color: #37928a;
+    transition: all 0.2s;
+    overflow: visible; }
+    .tabs-block .tab-item--active:after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background: #37928a; }
+  .tabs-block ::-webkit-scrollbar {
+    width: 0;
+    height: 0; }
+
+@media screen and (min-width: 900px) {
+  .tabs-block {
+    margin-top: 50px; }
+    .tabs-block .tabs-navigation {
+      margin-top: 32px; }
+    .tabs-block .tabs-navigation__item {
+      margin-right: 39px; } }
+
+@media screen and (min-width: 1300px) {
+  .tabs-block {
+    margin-top: 64px; } }

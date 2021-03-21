@@ -1,86 +1,115 @@
 @import "../../scss/variable.scss";
 
 @mixin active {
-    cursor: pointer;
-    text-shadow: 0 0 1px $color-aquamarine, 0 0 1px $color-aquamarine;
-    color: $color-aquamarine;
-    border-bottom: 1px solid $color-aquamarine;
+  position: relative;
+  font-weight: 600;
+  color: $color-aquamarine;
+  transition: all 0.2s;
+  overflow: visible;
 
-    @media screen and (max-width: 475px) {
-        border: none;
-    }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: $color-aquamarine;
+  }
 }
 
-.container {
-    width: 100%;
+.tabs-container {
+  padding: 0 21px;
 }
 
 .tabs-block {
-    max-width: 980px;
-    margin: auto;
-    height: 173px;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+  position: relative;
+
+  .tabs-title {
+    font-family: "Philosopher";
+    font-weight: 700;
+    line-height: 39.2px;
+    font-size: 28px;
+    color: $color-black;
+  }
+
+  .tabs-navigation {
+    position: relative;
+    margin: 26px auto 0;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    white-space: nowrap;
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25.2px;
+    overflow-x: scroll;
+    max-width: min-content;
 
-    ::-webkit-scrollbar {
-        width: 12px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
-        border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
-    }
+    // * bottom line
+    box-shadow: inset 0px -1px 0px 0px $color-gray-50;
 
-    &::after {
-        content: " ";
-        border-bottom: 1px solid $color-gray-50;
+    &__item {
+      margin-bottom: 12px;
+      margin-right: 48px;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      font: inherit;
+      color: inherit;
+      background-color: transparent;
+      outline: none;
+
+      &:focus {
+        @include active;
+      }
+
+      // * fix for font-weight
+      &:before {
+        display: block;
+        content: attr(title);
+        font-weight: 600;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
+  }
+
+  .tab-item--active {
+    @include active;
+  }
+
+  // * hide scroll
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .tabs-block {
+    margin-top: 50px;
 
     .tabs-navigation {
-        display: flex;
-        justify-content: center;
-        min-height: 52px;
-        overflow: auto;
-        flex-wrap: nowrap;
-
-        &__tab-item{
-            font-family: "SourceSansPro";
-            font-size: 16px;
-            margin-right: 39px;
-            padding-top: 15px;
-            white-space: nowrap;
-
-            &:last-child{
-                margin-right: 0px;
-            }
-
-            &:hover{
-                @include active;
-            }
-
-        }
-
-        .tab-item--active{
-            @include active;
-        }
-        
+      margin-top: 32px;
     }
 
-    &__title {
-        font-family: "Philosopher-Bold";
-        font-size: 28px;
-         line-height: 140%;
-         text-align: center;
+    .tabs-navigation__item {
+      margin-right: 39px;
     }
+  }
+}
 
-
-     @media screen and (max-width: $tablet) {
-            padding: 0px 20px
-    }
+@media screen and (min-width: $desktop) {
+  .tabs-block {
+    margin-top: 64px;
+  }
 }

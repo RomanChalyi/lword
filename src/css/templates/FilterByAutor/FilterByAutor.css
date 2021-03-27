@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("../../fonts/Philosopher-Regular.ttf"); }
+
+@font-face {
+  font-family: "Philosopher-Bold";
+  src: url("../../fonts/Philosopher-Bold.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro-Bold";
+  src: url("../../fonts/SourceSansPro-Bold.ttf"); }
+
+.autor-block {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+  @media screen and (max-width: 900px) {
+    .autor-block {
+      padding: 0px 20px; } }
+  @media screen and (max-width: 500px) {
+    .autor-block {
+      flex-wrap: nowrap;
+      overflow: auto; } }
+  .autor-block__item {
+    width: 50%;
+    display: flex;
+    margin-bottom: 40px; }
+    @media screen and (max-width: 900px) {
+      .autor-block__item {
+        width: 100%;
+        margin-bottom: 0px; } }
+    @media screen and (max-width: 500px) {
+      .autor-block__item {
+        flex-direction: column;
+        max-width: 200px;
+        margin-right: 40px; } }
+  .autor-block .autor-avatar img {
+    height: 324px;
+    width: 200px;
+    object-fit: cover; }
+  @media screen and (max-width: 900px) {
+    .autor-block .autor-avatar img {
+      height: 200px; } }
+  .autor-block .autor-description-block {
+    padding-left: 24px; }
+    .autor-block .autor-description-block__title {
+      font-family: SourceSansPro;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 10px; }
+    .autor-block .autor-description-block__desc {
+      font-family: SourceSansPro;
+      font-weight: normal;
+      font-size: 16px;
+      margin-bottom: 16px; }
+  .autor-block .button {
+    border: none;
+    outline: none;
+    height: 38px;
+    width: 130px;
+    color: #FFFFFF;
+    font-family: SourceSansPro;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #37928a; }
+    .autor-block .button:hover {
+      cursor: pointer; }

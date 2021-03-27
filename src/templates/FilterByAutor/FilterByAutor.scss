@@ -1,0 +1,83 @@
+@import "../../scss/variable.scss";
+
+.autor-block {
+  max-width: 980px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  
+  @media screen and (max-width: $tablet) {
+    padding: 0px 20px;
+  }
+
+  @media screen and (max-width: 500px) {
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  &__item {
+    width: 50%;
+    display: flex;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      max-width: 200px;
+      margin-right: 40px;
+    }
+  }
+
+  .autor-avatar {
+    img {
+      height: 324px;
+      width: 200px;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: $tablet) {
+      img {
+        height: 200px;
+      }
+    }
+  }
+
+  .autor-description-block {
+    padding-left: 24px;
+
+    &__title {
+      font-family: SourceSansPro;
+      font-weight: 600;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &__desc {
+      font-family: SourceSansPro;
+      font-weight: normal;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .button {
+    border: none;
+    outline: none;
+    height: 38px;
+    width: 130px;
+    color: $color-white;
+    font-family: SourceSansPro;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 4px;
+    background-color: $color-aquamarine;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

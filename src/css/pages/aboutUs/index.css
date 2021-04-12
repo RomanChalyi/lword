@@ -1,15 +1,15 @@
 @font-face {
   font-family: "Philosopher";
-  src: url("../shared/fonts/Philosopher.ttf"); }
-
-@font-face {
-  font-family: "SourceSansPro";
-  src: url("../shared/fonts/SourceSansPro.ttf"); }
+  src: url("../../fonts/Philosopher-Regular.ttf"); }
 
 @font-face {
   font-family: "Philosopher-Bold";
-  src: url("../shared/fonts/Philosopher-Bold.ttf"); }
+  src: url("../../fonts/Philosopher-Bold.ttf"); }
+
+@font-face {
+  font-family: "SourceSansPro";
+  src: url("../../fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: "SourceSansPro-Bold";
-  src: url("../shared/fonts/SourceSansPro-Bold.ttf"); }
+  src: url("../../fonts/SourceSansPro-Bold.ttf"); }

@@ -1,32 +1,35 @@
 //-------------------------------------------------COLOR----------------------------------------------------
-$color-black     : #231f20;
-$color-grey      : #494848;
-$color-gray-50   : #49484833;
+$color-black: #231f20;
+$color-grey-light-100: #929191;
+$color-grey-light-50: #f2f2f2;
+$color-grey: #494848;
+$color-gray-50: #49484833;
 $color-aquamarine: #37928a;
-$color-white     : #FFFFFF;
+$color-background: #999999;
+$color-white: #ffffff;
 //-------------------------------------------------MEDIA SCREEN---------------------------------------------------
 
-$mobile : 320px;
-$tablet : 900px;
+$mobile: 320px;
+$tablet: 900px;
 $desktop: 1300px;
 
 //-------------------------------------------------FONTS---------------------------------------------------
 @font-face {
   font-family: "Philosopher";
-  src        : url("../../fonts/Philosopher-Regular.ttf");
+  src: url("../../fonts/Philosopher-Regular.ttf");
 }
 
 @font-face {
   font-family: "Philosopher-Bold";
-  src        : url("../../fonts/Philosopher-Bold.ttf");
+  src: url("../../fonts/Philosopher-Bold.ttf");
 }
 
 @font-face {
   font-family: "SourceSansPro";
-  src        : url("../../fonts/SourceSansPro-Regular.ttf");
+  src: url("../../fonts/SourceSansPro-Regular.ttf");
 }
 
 @font-face {
   font-family: "SourceSansPro-Bold";
-  src        : url("../../fonts/SourceSansPro-Bold.ttf");
+  src: url("../../fonts/SourceSansPro-Bold.ttf");
 }
